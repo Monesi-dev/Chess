@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="http://93.147.39.246:4000">Simone</a>
+      
+          <ul class="navbar-nav ml-auto mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Game <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          
+      </nav>
+
+    <div class="container text-center d-flex justify-content-center">
+      <!--<img id="board" class="m-5" src="assets/Top - Wood TD 512x520.png">-->
+      <div id="board" class="m-5">
+
+        <!-- Knights -->
+
+        <img id="w-knight-1" class="piece" draggable="false" src="assets/White Knight Plastic 1.png">
+        <img id="w-knight-2" class="piece" draggable="false" src="assets/White Knight Plastic 2.png">
+        <img id="b-knight-1" class="piece" draggable="false" src="assets/Black Knight Plastic 1.png">
+        <img id="b-knight-2" class="piece" draggable="false" src="assets/Black Knight Plastic 2.png">
+
+
+        <!-- King -->
+
+        <img id="w-king" class="piece" src="assets/White King Plastic.png">
+        <img id="b-king" class="piece" src="assets/Black King Plastic.png">
+        
+
+        <!-- Queens -->
+
+        <img id="w-queen" class="piece" src="assets/White Queen Plastic.png">
+        <img id="b-queen" class="piece" src="assets/Black Queen Plastic.png">
+
+
+        <!-- Rooks -->
+
+        <img id="w-rook-1" class="piece" src="assets/White Rook Plastic.png">
+        <img id="w-rook-2" class="piece" src="assets/White Rook Plastic.png">
+        <img id="b-rook-1" class="piece" src="assets/Black Rook Plastic.png">
+        <img id="b-rook-2" class="piece" src="assets/Black Rook Plastic.png">
+
+
+        <!-- Bishops -->
+
+        <img id="w-bishop-1" class="piece" src="assets/White Bishop Plastic.png">
+        <img id="w-bishop-2" class="piece" src="assets/White Bishop Plastic 2.png">
+        <img id="b-bishop-1" class="piece" src="assets/Black Bishop Plastic.png">
+        <img id="b-bishop-2" class="piece" src="assets/Black Bishop Plastic2.png">
+
+
+        <!-- Pawns -->
+
+        <img id="w-pawn-1" class="piece" src="assets/White Pawn Plastic.png">
+        <img id="w-pawn-2" class="piece" src="assets/White Pawn Plastic.png">
+        <img id="w-pawn-3" class="piece" src="assets/White Pawn Plastic.png">
+        <img id="w-pawn-4" class="piece" src="assets/White Pawn Plastic.png">
+        <img id="w-pawn-5" class="piece" src="assets/White Pawn Plastic.png">
+        <img id="w-pawn-6" class="piece" src="assets/White Pawn Plastic.png">
+        <img id="w-pawn-7" class="piece" src="assets/White Pawn Plastic.png">
+        <img id="w-pawn-8" class="piece" src="assets/White Pawn Plastic.png">
+
+        <img id="b-pawn-1" class="piece" src="assets/Black Pawn Plastic.png">
+        <img id="b-pawn-2" class="piece" src="assets/Black Pawn Plastic.png">
+        <img id="b-pawn-3" class="piece" src="assets/Black Pawn Plastic.png">
+        <img id="b-pawn-4" class="piece" src="assets/Black Pawn Plastic.png">
+        <img id="b-pawn-5" class="piece" src="assets/Black Pawn Plastic.png">
+        <img id="b-pawn-6" class="piece" src="assets/Black Pawn Plastic.png">
+        <img id="b-pawn-7" class="piece" src="assets/Black Pawn Plastic.png">
+        <img id="b-pawn-8" class="piece" src="assets/Black Pawn Plastic.png">
+
+      </div>
+      
+    </div>
+	
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="Board.js"></script>
+  <script src="Piece.js"></script>
+  <script src="Pawn.js"></script>
+  <script src="Knight.js"></script>
+  <script src="Bishop.js"></script>
+  <script src="Rook.js"></script>
+  <script src="Queen.js"></script>
+  <script src="King.js"></script>
+  <script src="index.js"></script>
+</html>
