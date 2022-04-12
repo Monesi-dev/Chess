@@ -24,10 +24,10 @@ class Knight extends Piece {
 
         // The first if checks if the displacement has the shape of an horizontal L, the second one, instead, looks for vertical L
         if ((xDisplacement == 2 || xDisplacement == -2) && (yDisplacement == 1 || yDisplacement == -1)) {
-            if (this.isAPieceHere(x, y)) { return true }
+            return true
         }
         else if ((xDisplacement == 1 || xDisplacement == -1) && (yDisplacement == 2 || yDisplacement == -2)) {
-            if (this.isAPieceHere(x, y)) { return true }
+            return true
         }
         else { return false }
     }

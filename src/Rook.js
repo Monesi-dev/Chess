@@ -96,14 +96,14 @@ class Rook extends Piece {
             //Eating up
             if (y < this.y){
                 if(y == this.y - 1 || this.canMoveTo(this.x, y+1)){
-                    if (this.isAPieceHere(x,y)) return true
+                    return true
                 }
             }
 
             //Eating Down
             else{
                 if(y == this.y + 1 || this.canMoveTo(this.x, y-1)){
-                    if (this.isAPieceHere(x,y)) return true
+                    return true
                 }
             }
             

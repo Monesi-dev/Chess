@@ -177,6 +177,60 @@ class Queen extends Piece {
             
         }
 
+        else if(xDisplacement == yDisplacement){
+
+            if(yDisplacement > 0){
+                let d = 1;
+                let r = true
+                while(d < yDisplacement){
+                    if(this.isAPieceHere(this.x + d, this.y + d)){
+                        r = false
+                    }
+                    d++;
+                }
+                return r
+            }
+            else{
+                let d = 1;
+                let r = true;
+                while(d < yDisplacement){
+                    if(this.isAPieceHere(this.x - d, this.y - d)){
+                        r = false
+                    }
+                    d++;
+                }
+                return r
+            }
+        }
+
+        else if(xDisplacement == -yDisplacement){
+
+            if(yDisplacement > 0){
+                let d = 1;
+                let r = true
+                while(d < yDisplacement){
+                    if(this.isAPieceHere(this.x - d, this.y + d)){
+                        r = false
+                    }
+                    d++;
+                }
+                return r
+            }
+            else{
+                let d = 1;
+                let r = true;
+                while(d < xDisplacement){
+                    if(this.isAPieceHere(this.x + d, this.y - d)){
+                        r = false
+                    }
+                    d++;
+                }
+                return r
+            }
+        }
+
+        /*
+
         //These are the coordinates of the square before the one where the Queen should eat
         const xToCheck = x > this.x ? x-1 : x+1;
         const yToCheck = y > this.y ? y-1 : y+1;
@@ -184,5 +238,7 @@ class Queen extends Piece {
         //If the Queen can arrive there then she can eat the piece
         if(xToCheck == this.x && yToCheck == this.y){ return true }
         else { return this.canMoveTo(xToCheck, yToCheck) }
+
+        */
     }
 }

@@ -1,4 +1,7 @@
 img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  -ms-user-select: none;
   user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
@@ -24,4 +27,13 @@ img {
   width: 64px;
   height: 64px;
   z-index: 1;
+
+  user-drag: none;
+  -webkit-user-drag: none;
+  -ms-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }

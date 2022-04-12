@@ -21,6 +21,7 @@ class Board {
         }
         else {
             if (pieceClicked.color == this.turn) {
+                console.log(pieceClicked.color, this.turn)
                 this.selectPieceAt(x, y);
                 console.log("New Piece Selected")
             }
@@ -37,6 +38,17 @@ class Board {
                 pieceSelected.moveTo(x, y);
                 this.changeTurn();
 
+            }
+            else if(pieceSelected.enPassant(x,y)){
+                if (this.turn){
+                    this.eat(pieceSelected, x, y-1);
+                    pieceSelected.moveTo(x, y);
+                }
+                else {
+                    this.eat(pieceSelected, x, y+1);
+                    pieceSelected.moveTo(x, y);
+                }
+                this.changeTurn();
             }
 
         }
@@ -77,6 +89,9 @@ class Board {
 
     changeTurn() {
         this.turn = !this.turn;
+        this.pieces.forEach(piece => {
+            if (piece.color == this.turn) { piece.justMoved = false }
+        })
         this.state = 0;
     }
 

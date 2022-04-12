@@ -5,7 +5,8 @@ class Piece {
         this.color = color; // False for White and True for Black
         this.x = x;
         this.y = y;
-        this.pieces = pieces
+        this.justMoved = false; // This is necessary for the En Passant
+        this.pieces = pieces;
     }
 
     moveTo(x, y) {
@@ -37,6 +38,14 @@ class Piece {
         let r = false;
         this.pieces.forEach( piece => {
             if (piece.isHere(x,y)) { r = true }
+        })
+        return r;
+    }
+
+    isAPawnWhichHasJustMovedHere(x, y){
+        let r = false;
+        this.pieces.forEach( piece => {
+            if (piece.isHere(x,y) == true && piece.justMoved == true) { r = true }
         })
         return r;
     }

@@ -35,6 +35,9 @@ const brook2 = new Rook(document.getElementById("b-rook-2"), true, 7, 0, pieces)
 const wqueen = new Queen(document.getElementById("w-queen"), false, 3, 7, pieces);
 const bqueen = new Queen(document.getElementById("b-queen"), true, 3, 0, pieces);
 
+const wking = new King(document.getElementById("w-king"), false, 4, 7, pieces);
+const bking = new King(document.getElementById("b-king"), true, 4, 0, pieces);
+
 const wpawn1 = new Pawn(document.getElementById('w-pawn-1'), false, 0, 6, pieces);
 const wpawn2 = new Pawn(document.getElementById('w-pawn-2'), false, 1, 6, pieces);
 const wpawn3 = new Pawn(document.getElementById('w-pawn-3'), false, 2, 6, pieces);
@@ -51,7 +54,7 @@ const bpawn5 = new Pawn(document.getElementById('b-pawn-5'), true, 4, 1, pieces)
 const bpawn6 = new Pawn(document.getElementById('b-pawn-6'), true, 5, 1, pieces);
 const bpawn7 = new Pawn(document.getElementById('b-pawn-7'), true, 6, 1, pieces);
 const bpawn8 = new Pawn(document.getElementById('b-pawn-8'), true, 7, 1, pieces);
-pieces.push(knight1, knight2, bknight1, bknight2, wpawn1, wpawn2, wpawn3, wpawn4, wpawn5, wpawn6, wpawn7, wpawn8, bpawn1, bpawn2, bpawn3, bpawn4, bpawn5, bpawn6, bpawn7, bpawn8, wrook1, wrook2, brook1, brook2, wbishop1, wbishop2, bbishop1, bbishop2, wqueen, bqueen);
+pieces.push(knight1, knight2, bknight1, bknight2, wpawn1, wpawn2, wpawn3, wpawn4, wpawn5, wpawn6, wpawn7, wpawn8, bpawn1, bpawn2, bpawn3, bpawn4, bpawn5, bpawn6, bpawn7, bpawn8, wrook1, wrook2, brook1, brook2, wbishop1, wbishop2, bbishop1, bbishop2, wqueen, bqueen, wking, bking);
 pieces.forEach( piece => {
     piece.render(); 
     piece.setPieces(pieces);
@@ -81,6 +84,7 @@ canvas.addEventListener("click", (e) => {
         }
     }
 
+    console.log(cellX, cellY)
     board.click(cellX, cellY)
 //    if (e.altKey) knight1.moveTo(cellX, cellY);
 })
